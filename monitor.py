@@ -53,6 +53,10 @@ def schedule():
     round_robin_schedule()
     return jsonify({"message": "Round Robin Scheduling executed successfully"})
 
+@app.route('/')
+def index():
+    return "System Monitor Backend is Live!"
+
 # API to kill a specific process
 @app.route('/kill_process', methods=['POST'])
 def kill_process():
